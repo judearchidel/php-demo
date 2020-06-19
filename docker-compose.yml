@@ -1,0 +1,53 @@
+version: "3.2"
+services:
+  php:
+    build: './php/'
+    image: judearchie/php-mysql-demo
+    networks:
+        - backend
+    environment:
+        - MYSQL_HOST=jude-mysql-app
+        - MYSQL_USER=jude
+        - MYSQL_PASSWORD=pass
+        - MYSQL_DB=jude_db
+    volumes:
+        - ./public/:/var/www/html/
+  apache:
+    build: './apache/'
+    depends_on:
+      - php
+      - mysql
+    networks:
+      - frontend
+      - backend
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public/:/var/www/html/
+  mysql:
+    build: './database/'
+    networks:
+      - backend
+    environment:
+        - MYSQL_ROOT_PASSWORD=rootpassword
+        - MYSQL_USER=jude
+        - MYSQL_PASSWORD=pass 
+        - MYSQL_DATABASE=jude_db
+    container_name: jude-mysql-app
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:4.7
+    depends_on:
+        - mysql
+    networks:
+        - backend
+    ports:
+        - "30002:80"
+    environment:
+        - PMA_HOST=jude-mysql-app
+        - PMA_PORT= 3306
+    volumes:
+        - /sessions
+    container_name: phpmyadmin-app
+networks:
+  frontend:
+  backend:
