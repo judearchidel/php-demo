@@ -1,1 +1,23 @@
-Subscription; user: Subscription; user: enthuvadaeSubscription; user: Subscription; user: Subscription; user: Subscription; user: Subscription; user: haiSubscription; user: 1Subscription; user: 1
+
+Subscription; user: Uncaught Error: Call to a member function rowCount() on null in /var/www/html/api/post/read.php:47
+Stack trace:
+#0 {main}
+  thrown
+Subscription; user: <b>Error:</b> [8] Undefined variable: logMsg
+Subscription; user: Uncaught Error: Call to a member function rowCount() on null in /var/www/html/api/post/read.php:47
+Stack trace:
+#0 {main}
+  thrown
+Subscription; user: 
+Subscription; user: Uncaught Error: Call to a member function prepare() on null in /var/www/html/models/Post.php:27
+Stack trace:
+#0 /var/www/html/api/post/read.php(45): Post->read()
+#1 {main}
+  thrown
+Subscription; user: Uncaught ArgumentCountError: Too few arguments to function errorMessage(), 0 passed in /var/www/html/models/Post.php on line 31 and exactly 1 expected in /var/www/html/api/post/read.php:75
+Stack trace:
+#0 /var/www/html/models/Post.php(31): errorMessage()
+#1 /var/www/html/api/post/read.php(45): Post->read()
+#2 {main}
+  thrown
+Subscription; user: 
