@@ -12,6 +12,7 @@ services:
         - MYSQL_DB=jude_db
     volumes:
         - ./public/:/var/www/html/
+    container_name: jude-php-app
   apache:
     build: './apache/'
     depends_on:
@@ -24,6 +25,7 @@ services:
       - "8080:80"
     volumes:
       - ./public/:/var/www/html/
+    container_name: jude-apache-app
   mysql:
     build: './database/'
     networks:

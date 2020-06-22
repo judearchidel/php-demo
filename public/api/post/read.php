@@ -20,6 +20,10 @@
         ini_set('error_log', $log_file); 
         
         $error = print_r(error_get_last()['message'],true);
+
+        if(!$error){
+            $error =$error . "Read operation completed";
+        }
         
         errorMessage($error);
 
