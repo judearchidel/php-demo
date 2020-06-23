@@ -12,10 +12,10 @@
 
 <p>practice Section</p>
    <?php
-   
+   phpinfo();
 
-   echo " Date is" .date("Y/m/d") ."<br>";
-   echo " Date is" .date("Y-m-d") ."<br>";
+  /* echo " Date is" .date("Y/m/d") ."<br>";
+  // echo " Date is" .date("Y-m-d") ."<br>";
    //date_default_timezone_set("America/California");
    echo " Time is" .date("h:i:sa") ."<br>";
    
@@ -34,7 +34,7 @@
 	
 	
    }
-
+*/
    ?>
 
 </body>

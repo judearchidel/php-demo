@@ -1,5 +1,5 @@
 <?php
-        function customError($errno, $errstr) {
+       /* function customError($errno, $errstr) {
         
         $error =  "<b>Error:</b> [$errno] $errstr";
 
@@ -32,7 +32,7 @@
 
         register_shutdown_function('fatalShutdown');
 
-        set_error_handler("customError");
+        set_error_handler("customError");*/
 
         header('Access-Control-Allow-Origin: *');
         header('Content-Type: application/json');
